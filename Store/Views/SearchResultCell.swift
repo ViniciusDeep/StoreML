@@ -69,10 +69,8 @@ class SearchResultCell: UICollectionViewCell {
     }
     
     fileprivate func setUpComponentsInCell() {
-        let labelsStackView = UIStackView(arrangedSubviews: [nameLabel, categoryLabel, ratingLabel])
-        labelsStackView.axis = .vertical
-        
-        let infoTopStackView = UIStackView(arrangedSubviews: [appIconImageView, labelsStackView,getButton])
+
+        let infoTopStackView = UIStackView(arrangedSubviews: [appIconImageView, VericalStackView(arrangeSubviews: [nameLabel, categoryLabel, ratingLabel], spacing: 12),getButton])
         infoTopStackView.spacing = 12
         infoTopStackView.alignment = .center
         
@@ -81,13 +79,12 @@ class SearchResultCell: UICollectionViewCell {
         screenshotStackView.spacing = 12
         screenshotStackView.distribution = .fillEqually
         
-        let overralStackView = UIStackView(arrangedSubviews: [infoTopStackView, screenshotStackView])
-        overralStackView.axis = .vertical
-        overralStackView.spacing = 16
+        let overralStackView = VericalStackView(arrangeSubviews: [infoTopStackView, screenshotStackView], spacing: 16)
         
         addSubview(overralStackView)
         overralStackView.fillSuperview(padding: .init(top: 16, left: 16, bottom: 16, right: 16))
     }
  
+    
     
 }

@@ -18,6 +18,7 @@
 		929C97802266BF67009B4CA6 /* AppsSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929C977F2266BF67009B4CA6 /* AppsSearchController.swift */; };
 		929C97832266CC01009B4CA6 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929C97822266CC01009B4CA6 /* SearchResultCell.swift */; };
 		929C97862267509A009B4CA6 /* UIView+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929C97852267509A009B4CA6 /* UIView+Layout.swift */; };
+		929C97882267632F009B4CA6 /* VerticalStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929C97872267632F009B4CA6 /* VerticalStackView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		929C977F2266BF67009B4CA6 /* AppsSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsSearchController.swift; sourceTree = "<group>"; };
 		929C97822266CC01009B4CA6 /* SearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
 		929C97852267509A009B4CA6 /* UIView+Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Layout.swift"; sourceTree = "<group>"; };
+		929C97872267632F009B4CA6 /* VerticalStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalStackView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				929C97822266CC01009B4CA6 /* SearchResultCell.swift */,
+				929C97872267632F009B4CA6 /* VerticalStackView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -296,6 +299,7 @@
 				929C977D2266ABA2009B4CA6 /* CustomTabBarController.swift in Sources */,
 				929C97802266BF67009B4CA6 /* AppsSearchController.swift in Sources */,
 				929C97832266CC01009B4CA6 /* SearchResultCell.swift in Sources */,
+				929C97882267632F009B4CA6 /* VerticalStackView.swift in Sources */,
 				929C97862267509A009B4CA6 /* UIView+Layout.swift in Sources */,
 				929C974C2266A635009B4CA6 /* AppDelegate.swift in Sources */,
 			);
