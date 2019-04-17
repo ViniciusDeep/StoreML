@@ -9,7 +9,7 @@
 import UIKit
 
 class SearchResultCell: UICollectionViewCell {
-    lazy var appIconImageView: UIImageView = {
+   let appIconImageView: UIImageView = {
         let iv = UIImageView()
         iv.backgroundColor = .red
         iv.widthAnchor.constraint(equalToConstant: 64).isActive = true
@@ -18,26 +18,26 @@ class SearchResultCell: UICollectionViewCell {
         return iv
     }()
     
-    lazy var nameLabel: UILabel = {
+    let nameLabel: UILabel = {
        let label = UILabel()
-        label.text = "Eminem"
+        
         label.font = UIFont.boldSystemFont(ofSize: 50)
         return label
     }()
     
-    lazy var categoryLabel: UILabel = {
+    let categoryLabel: UILabel = {
         let label = UILabel()
-        label.text = "Rapper"
+        label.text = "Genre"
         return label
     }()
     
-    lazy var ratingLabel: UILabel = {
+    let ratingLabel: UILabel = {
         let label = UILabel()
         label.text = "9.26 M"
         return label
     }()
     
-    lazy var getButton: UIButton = {
+    let getButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("GET", for: .normal)
         button.setTitleColor(.blue, for: .normal)

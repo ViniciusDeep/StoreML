@@ -11,6 +11,8 @@ import UIKit
 
 class AppsSearchController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
+    let artist: [String] = ["Eminem", "Anitta", "Cloud"]
+    
     fileprivate let cellId: String = "id1234"
     
     override func viewDidLoad() {
@@ -25,12 +27,11 @@ class AppsSearchController: UICollectionViewController, UICollectionViewDelegate
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: UICollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! SearchResultCell
-        
         return cell
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return artist.count
     }
     
     

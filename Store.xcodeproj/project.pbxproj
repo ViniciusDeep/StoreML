@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		929C974C2266A635009B4CA6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929C974B2266A635009B4CA6 /* AppDelegate.swift */; };
-		929C974E2266A635009B4CA6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929C974D2266A635009B4CA6 /* ViewController.swift */; };
 		929C97542266A635009B4CA6 /* Store.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 929C97522266A635009B4CA6 /* Store.xcdatamodeld */; };
 		929C97562266A639009B4CA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 929C97552266A639009B4CA6 /* Assets.xcassets */; };
 		929C97592266A639009B4CA6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 929C97572266A639009B4CA6 /* LaunchScreen.storyboard */; };
@@ -41,7 +40,6 @@
 /* Begin PBXFileReference section */
 		929C97482266A635009B4CA6 /* Store.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Store.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		929C974B2266A635009B4CA6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		929C974D2266A635009B4CA6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		929C97532266A635009B4CA6 /* Store.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Store.xcdatamodel; sourceTree = "<group>"; };
 		929C97552266A639009B4CA6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		929C97582266A639009B4CA6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -111,7 +109,6 @@
 				929C97812266CBEC009B4CA6 /* Views */,
 				929C977E2266BF4A009B4CA6 /* Controllers */,
 				929C974B2266A635009B4CA6 /* AppDelegate.swift */,
-				929C974D2266A635009B4CA6 /* ViewController.swift */,
 				929C97552266A639009B4CA6 /* Assets.xcassets */,
 				929C97572266A639009B4CA6 /* LaunchScreen.storyboard */,
 				929C975A2266A639009B4CA6 /* Info.plist */,
@@ -295,7 +292,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				929C97542266A635009B4CA6 /* Store.xcdatamodeld in Sources */,
-				929C974E2266A635009B4CA6 /* ViewController.swift in Sources */,
 				929C977D2266ABA2009B4CA6 /* CustomTabBarController.swift in Sources */,
 				929C97802266BF67009B4CA6 /* AppsSearchController.swift in Sources */,
 				929C97832266CC01009B4CA6 /* SearchResultCell.swift in Sources */,
