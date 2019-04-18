@@ -21,11 +21,12 @@ class CustomTabBarController: UITabBarController {
             createNavController(viewController: UIViewController(), title: "Music", imageName: "apps"),
         ]
     }
-    fileprivate func createNavController(viewController: UIViewController, title: String, imageName: String) -> UIViewController {
+    fileprivate func createNavController(viewController: UIViewController, title: String, imageName: String) -> UINavigationController {
         let navVC = UINavigationController(rootViewController: viewController)
         navVC.navigationBar.prefersLargeTitles = true
         viewController.navigationItem.title = title
         viewController.view.backgroundColor = .white
+        navVC.tabBarController?.tabBar.tintColor = .blue 
         navVC.tabBarItem.title = title
         navVC.tabBarItem.image = UIImage(named: imageName)
         return navVC

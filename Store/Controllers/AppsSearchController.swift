@@ -8,10 +8,8 @@
 
 import UIKit
 
-
 class AppsSearchController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
-    let artist: [String] = ["Eminem", "Anitta", "Cloud"]
     
     fileprivate let cellId: String = "id1234"
     
@@ -19,6 +17,33 @@ class AppsSearchController: UICollectionViewController, UICollectionViewDelegate
         super.viewDidLoad()
         collectionView.backgroundColor = .white
         collectionView.register(SearchResultCell.self, forCellWithReuseIdentifier: cellId)
+        
+        fetchItunesApps()
+    }
+    
+    fileprivate func fetchItunesApps() {
+        let urlString = "https://itunes.apple.com/search?term=instagram&entity=software"
+        let urlSession = URLSession.shared
+        guard let url = URL(string: urlString) else {return}
+        
+        urlSession.dataTask(with: url) { (data, response, error) in
+            guard let data = data else {return}
+        
+            if let error = error {
+                print("Failed to fetch apps", error)
+                return
+            }
+          
+            do {
+                let searchResult = try JSONDecoder().decode(SearchResult.self, from: data)
+                searchResult.results.forEach({print($0.trackName, $0.primaryGenreName)})
+            } catch let jsonError{
+                print("Failed to decode JSON:", jsonError)
+            }
+       
+        }.resume()
+        
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -26,16 +51,17 @@ class AppsSearchController: UICollectionViewController, UICollectionViewDelegate
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell: UICollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! SearchResultCell
+        let cell:SearchResultCell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! SearchResultCell
+   
+        
+    
+    
         return cell
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return artist.count
+        return 1
     }
-    
-    
-    
     
      init() {
         super.init(collectionViewLayout: UICollectionViewFlowLayout())

@@ -8,8 +8,8 @@
 
 import UIKit
 
-class SearchResultCell: UICollectionViewCell {
-   let appIconImageView: UIImageView = {
+public class SearchResultCell: UICollectionViewCell {
+    lazy var appIconImageView: UIImageView = {
         let iv = UIImageView()
         iv.backgroundColor = .red
         iv.widthAnchor.constraint(equalToConstant: 64).isActive = true
@@ -18,26 +18,25 @@ class SearchResultCell: UICollectionViewCell {
         return iv
     }()
     
-    let nameLabel: UILabel = {
+    lazy var nameLabel: UILabel = {
        let label = UILabel()
-        
-        label.font = UIFont.boldSystemFont(ofSize: 50)
+        label.text = "APP Name"
         return label
     }()
     
-    let categoryLabel: UILabel = {
+    lazy var categoryLabel: UILabel = {
         let label = UILabel()
-        label.text = "Genre"
+        label.text = "Category & Gender of App"
         return label
     }()
     
-    let ratingLabel: UILabel = {
+    lazy var ratingLabel: UILabel = {
         let label = UILabel()
         label.text = "9.26 M"
         return label
     }()
     
-    let getButton: UIButton = {
+    lazy var getButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("GET", for: .normal)
         button.setTitleColor(.blue, for: .normal)
@@ -69,11 +68,9 @@ class SearchResultCell: UICollectionViewCell {
     }
     
     fileprivate func setUpComponentsInCell() {
-
         let infoTopStackView = UIStackView(arrangedSubviews: [appIconImageView, VericalStackView(arrangeSubviews: [nameLabel, categoryLabel, ratingLabel], spacing: 12),getButton])
         infoTopStackView.spacing = 12
         infoTopStackView.alignment = .center
-        
         
         let screenshotStackView = UIStackView(arrangedSubviews: [screenshot1ImageView, screenshot2ImageView, screenshot3ImageView])
         screenshotStackView.spacing = 12

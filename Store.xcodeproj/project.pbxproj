@@ -18,6 +18,7 @@
 		929C97832266CC01009B4CA6 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929C97822266CC01009B4CA6 /* SearchResultCell.swift */; };
 		929C97862267509A009B4CA6 /* UIView+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929C97852267509A009B4CA6 /* UIView+Layout.swift */; };
 		929C97882267632F009B4CA6 /* VerticalStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929C97872267632F009B4CA6 /* VerticalStackView.swift */; };
+		929C978B2268D254009B4CA6 /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929C978A2268D254009B4CA6 /* SearchResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		929C97822266CC01009B4CA6 /* SearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
 		929C97852267509A009B4CA6 /* UIView+Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Layout.swift"; sourceTree = "<group>"; };
 		929C97872267632F009B4CA6 /* VerticalStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalStackView.swift; sourceTree = "<group>"; };
+		929C978A2268D254009B4CA6 /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 		929C974A2266A635009B4CA6 /* Store */ = {
 			isa = PBXGroup;
 			children = (
+				929C97892268D242009B4CA6 /* Model */,
 				929C978422675048009B4CA6 /* Helpers */,
 				929C97812266CBEC009B4CA6 /* Views */,
 				929C977E2266BF4A009B4CA6 /* Controllers */,
@@ -159,6 +162,14 @@
 				929C97852267509A009B4CA6 /* UIView+Layout.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		929C97892268D242009B4CA6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				929C978A2268D254009B4CA6 /* SearchResult.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,6 +304,7 @@
 			files = (
 				929C97542266A635009B4CA6 /* Store.xcdatamodeld in Sources */,
 				929C977D2266ABA2009B4CA6 /* CustomTabBarController.swift in Sources */,
+				929C978B2268D254009B4CA6 /* SearchResult.swift in Sources */,
 				929C97802266BF67009B4CA6 /* AppsSearchController.swift in Sources */,
 				929C97832266CC01009B4CA6 /* SearchResultCell.swift in Sources */,
 				929C97882267632F009B4CA6 /* VerticalStackView.swift in Sources */,
