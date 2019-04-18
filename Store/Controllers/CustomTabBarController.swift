@@ -10,6 +10,8 @@ import UIKit
 
 class CustomTabBarController: UITabBarController {
 
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setComponents()
@@ -32,3 +34,6 @@ class CustomTabBarController: UITabBarController {
         return navVC
     }
 }
+
+
+
