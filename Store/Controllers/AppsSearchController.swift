@@ -10,7 +10,6 @@ import UIKit
 
 class AppsSearchController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
-    
     fileprivate let cellId: String = "id1234"
     
     override func viewDidLoad() {
@@ -22,8 +21,6 @@ class AppsSearchController: UICollectionViewController, UICollectionViewDelegate
     }
     
     fileprivate var appResults = [Result]()
-    
-    
     fileprivate func fetchItunesApps() {
         Service.shared.fetchApps { (results, error) in
             if let error = error {
@@ -48,6 +45,10 @@ class AppsSearchController: UICollectionViewController, UICollectionViewDelegate
         cell.nameLabel.text = appResult.trackName
         cell.categoryLabel.text = appResult.primaryGenreName
         cell.ratingLabel.text = "Rating: \(appResult.averageUserRating ?? 0.0)"
+        
+        cell.appIconImageView = UIImageView(image: UIImage(imageLiteralResourceName: "search"))
+        cell.screenshot1ImageView = UIImageView(image: UIImage(imageLiteralResourceName: "today_icon"))
+        
         return cell
     }
     
