@@ -26,7 +26,6 @@ class Service {
             }
             do {
                 let searchResult = try JSONDecoder().decode(SearchResult.self, from: data)
-                let result = searchResult.results
                 completion(searchResult.results, nil)
                 
             } catch let jsonError{

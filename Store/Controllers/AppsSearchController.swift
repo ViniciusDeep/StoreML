@@ -7,16 +7,16 @@
 //
 
 import UIKit
+import SDWebImage
 
 class AppsSearchController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
     fileprivate let cellId: String = "id1234"
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.backgroundColor = .white
         collectionView.register(SearchResultCell.self, forCellWithReuseIdentifier: cellId)
-        
         fetchItunesApps()
     }
     
@@ -41,14 +41,7 @@ class AppsSearchController: UICollectionViewController, UICollectionViewDelegate
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell:SearchResultCell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! SearchResultCell
-        let appResult = appResults[indexPath.item]
-        cell.nameLabel.text = appResult.trackName
-        cell.categoryLabel.text = appResult.primaryGenreName
-        cell.ratingLabel.text = "Rating: \(appResult.averageUserRating ?? 0.0)"
-        
-        cell.appIconImageView = UIImageView(image: UIImage(imageLiteralResourceName: "search"))
-        cell.screenshot1ImageView = UIImageView(image: UIImage(imageLiteralResourceName: "today_icon"))
-        
+        cell.appResult = appResults[indexPath.item]
         return cell
     }
     

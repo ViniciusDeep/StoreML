@@ -6,8 +6,7 @@ target 'Store' do
   use_frameworks!
 
   # Pods for Store
-   pod 'SDWebImage', '~> 5.0'
-
+    pod 'SDWebImage', '~> 5.0'
   target 'StoreTests' do
     inherit! :search_paths
     # Pods for testing
