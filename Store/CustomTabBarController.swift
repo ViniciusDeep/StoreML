@@ -9,18 +9,15 @@
 import UIKit
 
 class CustomTabBarController: UITabBarController {
-
-
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setComponents()
     }
     fileprivate func setComponents() {
         viewControllers = [
-            createNavController(viewController: AppsSearchController(), title: "Search", imageName: "search"),
+            createNavController(viewController: AppsPageController(), title: "Apps", imageName: "apps"),
             createNavController(viewController: UIViewController(), title: "Today", imageName: "today_icon"),
-            createNavController(viewController: UIViewController(), title: "Music", imageName: "apps"),
+            createNavController(viewController: AppsSearchController(), title: "Search", imageName: "search"),
         ]
     }
     fileprivate func createNavController(viewController: UIViewController, title: String, imageName: String) -> UINavigationController {

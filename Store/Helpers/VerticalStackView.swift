@@ -6,20 +6,23 @@
 //  Copyright © 2019 Vinicius Mangueira Correia. All rights reserved.
 //
 
+
+
 import UIKit
 
-
-class VericalStackView: UIStackView {
+class VerticalStackView: UIStackView {
     
-    init(arrangeSubviews: [UIView], spacing: CGFloat) {
+    init(arrangedSubviews: [UIView], spacing: CGFloat = 0) {
         super.init(frame: .zero)
-        arrangeSubviews.forEach({addArrangedSubview($0)})
-        self.axis = .vertical
+        
+        arrangedSubviews.forEach({addArrangedSubview($0)})
+        
         self.spacing = spacing
-    }
-    required init(coder: NSCoder) {
-        fatalError()
+        self.axis = .vertical
     }
     
+    required init(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
 }
